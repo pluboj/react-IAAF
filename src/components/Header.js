@@ -13,8 +13,10 @@ const Header = () => (
 					<div id="navbar" className="navbar-collapse collapse">
 						<ul className="nav navbar-nav">
 							<li className="active"><a href="#Home">Home</a></li>
-							<li><a href="#Home">Page 1</a></li>
-							<li><a href="#Home">Page 2</a></li>
+							<li><a href="#Home">SPRINTS</a></li>
+							<li><a href="#Home">JUMPS</a></li>
+							<li><a href="#Home">THROWS</a></li>
+							<li><a href="#Home">COMBINED EVENTS</a></li>
 						</ul>
 					</div>
 				</div>
