@@ -15,9 +15,9 @@ const Header = () => (
 						<ul className="nav navbar-nav">
 							<li><Link to="/">Home</Link></li>
 							<li><Link to="/sprints">SPRINTS</Link></li>
-							<li><Link to="#Home">JUMPS</Link></li>
-							<li><Link to="#Home">THROWS</Link></li>
-							<li><Link to="#Home">COMBINED EVENTS</Link></li>
+							<li><Link to="/jumps">JUMPS</Link></li>
+							<li><Link to="/throws">THROWS</Link></li>
+							<li><Link to="/combined">COMBINED EVENTS</Link></li>
 						</ul>
 					</div>
 				</div>
