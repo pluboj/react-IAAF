@@ -11,3 +11,9 @@ div.navbar-brand {
   color: #c6c633 !important;
 }
 
+.navbar-nav .active {
+	color: #fff !important;
+	outline: none !important;
+	font-weight: bold;
+}
+
