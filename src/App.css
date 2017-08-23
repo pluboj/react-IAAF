@@ -17,3 +17,7 @@ div.navbar-brand {
 	font-weight: bold;
 }
 
+.nav-pills .active {
+	color: #000 !important;
+	font-weight: bold;
+}
