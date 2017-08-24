@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 
 import m100 from './sprints/m100';
+import m200 from './sprints/m200';
+import m400 from './sprints/m400';
 
 const Sprints = () => (
 	<div className="container">
@@ -18,6 +20,8 @@ const Sprints = () => (
 	      	</div>
 
 	      	<Route path="/sprints/m100" component={m100} />
+	      	<Route path="/sprints/m200" component={m200} />
+	      	<Route path="/sprints/m400" component={m400} />
 		</div>
 	</div>
 )
