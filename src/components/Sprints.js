@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Redirect } from 'react-router-dom';
 
 import m100 from './sprints/m100';
 import m200 from './sprints/m200';
@@ -13,12 +13,18 @@ const Sprints = () => (
 					<h2>Sprints</h2>
 				</div>
 				<ul className="nav nav-pills">
-					<li><NavLink to='/sprints/m100'>100 Metres</NavLink></li>
-					<li><NavLink to='/sprints/m200'>200 Metres</NavLink></li>
-					<li><NavLink to='/sprints/m400'>400 Metres</NavLink></li>
+					<li><NavLink to='/sprints/m100' 
+						className="btn btn-default">100 Metres</NavLink></li>
+					<li><NavLink to='/sprints/m200' 
+						className="btn btn-default">200 Metres</NavLink></li>
+					<li><NavLink to='/sprints/m400' 
+						className="btn btn-default">400 Metres</NavLink></li>
 		      	</ul>
 	      	</div>
 
+	      	<Route exact path="/sprints" 
+	      		render={ () => <Redirect to="/sprints/m100" /> } 
+	      	/>
 	      	<Route path="/sprints/m100" component={m100} />
 	      	<Route path="/sprints/m200" component={m200} />
 	      	<Route path="/sprints/m400" component={m400} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, NavLink, Redirect } from 'react-router-dom';
 
 const Jumps = () => (
 	<div className="container">
@@ -8,18 +9,34 @@ const Jumps = () => (
 					<h2>Jumps</h2>
 				</div>
 				<ul className="nav nav-pills">
-		        <li role="presentation" className="active">
-		        	<a href='/jumps/hjump'>High Jump</a>
-		        </li>
-		        <li role="presentation">
-		        	<a href='/jumps/pvault'>Pole Vault</a>
-		        </li>
-		        <li role="presentation">
-		        	<a href='/jumps/ljump'>Long Jump</a>
-		        </li>
-		        <li role="presentation">
-		        	<a href='/jumps/tjump'>Triple Jump</a>
-		        </li>
+				<li>
+					<NavLink 
+						to='/jumps/hjump' 
+						className="btn btn-default">
+						High Jump
+					</NavLink>
+				</li>
+				<li>
+					<NavLink 
+						to='/jumps/pvault' 
+						className="btn btn-default">
+						Pole Vault
+					</NavLink>
+				</li>
+				<li>
+					<NavLink 
+						to='/jumps/ljump' 
+						className="btn btn-default">
+						Long Jump
+					</NavLink>
+				</li>
+				<li>
+					<NavLink 
+						to='/jumps/tjump' 
+						className="btn btn-default">
+						Triple Jump
+					</NavLink>
+				</li>
 		      	</ul>
 	      	</div>
 		</div>
