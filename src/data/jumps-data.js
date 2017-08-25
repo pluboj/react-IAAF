@@ -39,3 +39,46 @@ export const HighJumpW = [
 		mark: "1.99"
 	}
 ];
+
+export const PoleVaultM = [
+	{
+		pos: "1",
+		name: "Sam KENDRICKS",
+		country: "USA",
+		mark: "5.95"
+	},
+	{
+		pos: "2",
+		name: "Piotr LISEK",
+		country: "POL",
+		mark: "5.89"
+	},
+	{
+		pos: "3",
+		name: "Renaud LAVILLENIE",
+		country: "FRA",
+		mark: "5.89"
+	}
+];
+
+export const PoleVaultW = [
+	{
+		pos: "1",
+		name: "Ekateríni STEFANÍDI",
+		country: "GRE",
+		mark: "4.91"
+	},
+	{
+		pos: "2",
+		name: "Sandi MORRIS",
+		country: "USA",
+		mark: "4.75"
+	},
+	{
+		pos: "3",
+		name: "Robeilys PEINADO",
+		country: "VEN",
+		mark: "4.65"
+	}
+];
+

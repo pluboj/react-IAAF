@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, NavLink, Redirect } from 'react-router-dom';
 
 import hjump from './jumps/hjump';
+import pvault from './jumps/pvault';
 
 const Jumps = () => (
 	<div className="container">
@@ -42,7 +43,11 @@ const Jumps = () => (
 		      	</ul>
 	      	</div>
 
+	      	<Route exact path="/jumps" 
+	      		render={ () => <Redirect to="/jumps/hjump" /> } 
+	      	/>
 	      	<Route path="/jumps/hjump" component={hjump} />
+	      	<Route path="/jumps/pvault" component={pvault} />
 		</div>
 	</div>
 )
