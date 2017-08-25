@@ -6,7 +6,7 @@ import pvault from './jumps/pvault';
 import ljump from './jumps/ljump';
 import tjump from './jumps/tjump';
 
-const Jumps = () => (
+const Jumps = ({match}) => (
 	<div className="container">
 		<div className="jumbotron">
 			<div className="row">
@@ -16,28 +16,28 @@ const Jumps = () => (
 				<ul className="nav nav-pills">
 				<li>
 					<NavLink 
-						to='/jumps/hjump' 
+						to={`${match.url}/hjump`} 
 						className="btn btn-default">
 						High Jump
 					</NavLink>
 				</li>
 				<li>
 					<NavLink 
-						to='/jumps/pvault' 
+						to={`${match.url}/pvault`} 
 						className="btn btn-default">
 						Pole Vault
 					</NavLink>
 				</li>
 				<li>
 					<NavLink 
-						to='/jumps/ljump' 
+						to={`${match.url}/ljump`} 
 						className="btn btn-default">
 						Long Jump
 					</NavLink>
 				</li>
 				<li>
 					<NavLink 
-						to='/jumps/tjump' 
+						to={`${match.url}/tjump`} 
 						className="btn btn-default">
 						Triple Jump
 					</NavLink>
@@ -45,13 +45,13 @@ const Jumps = () => (
 		      	</ul>
 	      	</div>
 
-	      	<Route exact path="/jumps" 
-	      		render={ () => <Redirect to="/jumps/hjump" /> } 
+	      	<Route exact path={match.path} 
+	      		render={ () => <Redirect to={`${match.path}/hjump`} /> } 
 	      	/>
-	      	<Route path="/jumps/hjump" component={hjump} />
-	      	<Route path="/jumps/pvault" component={pvault} />
-	      	<Route path="/jumps/ljump" component={ljump} />
-	      	<Route path="/jumps/tjump" component={tjump} />
+	      	<Route path={`${match.path}/hjump`} component={hjump} />
+	      	<Route path={`${match.path}/pvault`} component={pvault} />
+	      	<Route path={`${match.path}/ljump`} component={ljump} />
+	      	<Route path={`${match.path}/tjump`} component={tjump} />
 		</div>
 	</div>
 )

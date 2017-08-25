@@ -5,7 +5,7 @@ import m100 from './sprints/m100';
 import m200 from './sprints/m200';
 import m400 from './sprints/m400';
 
-const Sprints = () => (
+const Sprints = ({match}) => (
 	<div className="container">
 		<div className="jumbotron">
 			<div className="row">
@@ -13,21 +13,21 @@ const Sprints = () => (
 					<h2>Sprints</h2>
 				</div>
 				<ul className="nav nav-pills">
-					<li><NavLink to='/sprints/m100' 
+					<li><NavLink to={`${match.url}/m100`} 
 						className="btn btn-default">100 Metres</NavLink></li>
-					<li><NavLink to='/sprints/m200' 
+					<li><NavLink to={`${match.url}/m200`} 
 						className="btn btn-default">200 Metres</NavLink></li>
-					<li><NavLink to='/sprints/m400' 
+					<li><NavLink to={`${match.url}/m400`} 
 						className="btn btn-default">400 Metres</NavLink></li>
 		      	</ul>
 	      	</div>
 
-	      	<Route exact path="/sprints" 
-	      		render={ () => <Redirect to="/sprints/m100" /> } 
+	      	<Route exact path={match.path} 
+	      		render={ () => <Redirect to={`${match.url}/m100`} /> } 
 	      	/>
-	      	<Route path="/sprints/m100" component={m100} />
-	      	<Route path="/sprints/m200" component={m200} />
-	      	<Route path="/sprints/m400" component={m400} />
+	      	<Route path={`${match.path}/m100`} component={m100} />
+	      	<Route path={`${match.path}/m200`} component={m200} />
+	      	<Route path={`${match.path}/m400`} component={m400} />
 		</div>
 	</div>
 )
