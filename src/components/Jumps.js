@@ -4,6 +4,7 @@ import { Route, NavLink, Redirect } from 'react-router-dom';
 import hjump from './jumps/hjump';
 import pvault from './jumps/pvault';
 import ljump from './jumps/ljump';
+import tjump from './jumps/tjump';
 
 const Jumps = () => (
 	<div className="container">
@@ -50,6 +51,7 @@ const Jumps = () => (
 	      	<Route path="/jumps/hjump" component={hjump} />
 	      	<Route path="/jumps/pvault" component={pvault} />
 	      	<Route path="/jumps/ljump" component={ljump} />
+	      	<Route path="/jumps/tjump" component={tjump} />
 		</div>
 	</div>
 )
