@@ -82,3 +82,50 @@ export const PoleVaultW = [
 	}
 ];
 
+export const LongJumpM = [
+	{
+		pos: "1",
+		name: "Luvo MANYONGA",
+		country: "RSA",
+		mark: "8.48",
+		wind: "+0.4"
+	},
+	{
+		pos: "2",
+		name: "Jarrion LAWSON",
+		country: "USA",
+		mark: "8.44",
+		wind: "+0.6"
+	},
+	{
+		pos: "3",
+		name: "Ruswahl SAMAAI",
+		country: "RSA",
+		mark: "8.32",
+		wind: "-0.1"
+	}
+];
+
+export const LongJumpW = [
+	{
+		pos: "1",
+		name: "Brittney REESE",
+		country: "USA",
+		mark: "7.02",
+		wind: "+0.1"
+	},
+	{
+		pos: "2",
+		name: "	Darya KLISHINA",
+		country: "ANA",
+		mark: "7.00",
+		wind: "-0.3"
+	},
+	{
+		pos: "3",
+		name: "Tianna BARTOLETTA",
+		country: "USA",
+		mark: "6.97",
+		wind: "-0.2"
+	}
+];

@@ -6,6 +6,7 @@ const JumpsE = (props) => (
       <td>{props.name}</td>
       <td>{props.country}</td>
       <td>{props.mark}</td>
+      {props.wind ? <td>{props.wind}</td> : ''}
     </tr>
 );
 
