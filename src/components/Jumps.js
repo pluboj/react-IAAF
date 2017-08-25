@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, NavLink, Redirect } from 'react-router-dom';
 
+import hjump from './jumps/hjump';
+
 const Jumps = () => (
 	<div className="container">
 		<div className="jumbotron">
@@ -39,6 +41,8 @@ const Jumps = () => (
 				</li>
 		      	</ul>
 	      	</div>
+
+	      	<Route path="/jumps/hjump" component={hjump} />
 		</div>
 	</div>
 )
