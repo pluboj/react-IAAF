@@ -1,10 +1,15 @@
 import React from 'react';
 import { Route, NavLink, Redirect } from 'react-router-dom';
 
-import hjump from './jumps/hjump';
-import pvault from './jumps/pvault';
-import ljump from './jumps/ljump';
-import tjump from './jumps/tjump';
+import JumpsContainer from './jumps/JumpsContainer';
+import { HighJumpM, 
+		HighJumpW,
+		PoleVaultM, 
+		PoleVaultW,
+		TripleJumpM, 
+		TripleJumpW,
+		LongJumpM, 
+		LongJumpW } from '../data/jumps-data';
 
 const Jumps = ({match}) => (
 	<div className="container">
@@ -48,10 +53,14 @@ const Jumps = ({match}) => (
 	      	<Route exact path={match.path} 
 	      		render={ () => <Redirect to={`${match.path}/hjump`} /> } 
 	      	/>
-	      	<Route path={`${match.path}/hjump`} component={hjump} />
-	      	<Route path={`${match.path}/pvault`} component={pvault} />
-	      	<Route path={`${match.path}/ljump`} component={ljump} />
-	      	<Route path={`${match.path}/tjump`} component={tjump} />
+	      	<Route path={`${match.path}/hjump`} 
+	      		render={ () => <JumpsContainer data={{m:HighJumpM, w: HighJumpW}} />} />
+	      	<Route path={`${match.path}/pvault`} 
+	      		render={ () => <JumpsContainer data={{m:PoleVaultM, w: PoleVaultW}} />} />
+	      	<Route path={`${match.path}/ljump`} 
+	      		render={ () => <JumpsContainer data={{m:TripleJumpM, w: TripleJumpW}} />} />
+	      	<Route path={`${match.path}/tjump`} 
+	      		render={ () => <JumpsContainer data={{m:LongJumpM, w: LongJumpW}} />} />
 		</div>
 	</div>
 )

@@ -1,9 +1,8 @@
 import React from 'react';
 import JumpsE from './JumpsE';
-import { HighJumpM, HighJumpW } from '../../data/jumps-data';
 
-const hjump = (props) => {
-  let resultsM = HighJumpM.map((result) => {
+const JumpssContainer = (props) => {
+  let resultsM = props.data.m.map((result) => {
     return <JumpsE pos={result.pos}
                    name={result.name}
                    country={result.country}
@@ -11,7 +10,7 @@ const hjump = (props) => {
                    key={"hjumpm-"+ result.pos} />
   }); 
 
-  let resultsW = HighJumpW.map((result) => {
+  let resultsW = props.data.w.map((result) => {
     return <JumpsE pos={result.pos}
                    name={result.name}
                    country={result.country}
@@ -69,4 +68,4 @@ const hjump = (props) => {
   );
 }
 
-export default hjump;
+export default JumpssContainer;
