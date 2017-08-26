@@ -3,6 +3,9 @@ import { Route, NavLink, Redirect } from 'react-router-dom';
 
 import SprintsContainer from './sprints/SprintsContainer';
 import { 
+	Sprints100,
+	Sprints200,
+	Sprints400,
 	Sprint100m, 
 	Sprint100w, 
 	Sprint200m, 
@@ -32,11 +35,20 @@ const Sprints = ({match}) => (
 	      		render={ () => <Redirect to={`${match.url}/m100`} /> } 
 	      	/>
 	      	<Route path={`${match.path}/m100`} 
-	      		render={ () => <SprintsContainer data={{m:Sprint100m, w: Sprint100w}} />} />
+	      		render={ () => <SprintsContainer 
+	      			data={{m:Sprint100m, w: Sprint100w}} 
+	      			intro={Sprints100}
+	      			/>} />
 	      	<Route path={`${match.path}/m200`} 
-	      		render={ () => <SprintsContainer data={{m:Sprint200m, w: Sprint200w}} />} />
+	      		render={ () => <SprintsContainer 
+	      			data={{m:Sprint200m, w: Sprint200w}} 
+	      			intro={Sprints200}
+	      			/>} />
 	      	<Route path={`${match.path}/m400`} 
-	      		render={ () => <SprintsContainer data={{m:Sprint400m, w: Sprint400w}} />} />
+	      		render={ () => <SprintsContainer 
+	      			data={{m:Sprint400m, w: Sprint400w}} 
+	      			intro={Sprints400}
+	      			/>} />
 		</div>
 	</div>
 )

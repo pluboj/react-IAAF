@@ -19,13 +19,11 @@ const SprintsContainer = (props) => {
                    reaction_time={result.reaction_time}
                    key={"m100-"+ result.pos} />
   }); 
+  
   return (
   	<div>
   		<h4>How it works</h4>
-  		<small>Runners race for 100m down the home straight of a 400m track. They start from blocks and run in lanes.</small>
-  		<br/><br/>
-  		<small>A reaction time – measured by sensors in the starting pistol and on the blocks – of less than 0.1 is deemed a false start and runners will be recalled, and the responsible athlete disqualified.</small>
-  		<br/><br/>
+  		{props.intro[0]} <br/><br/> {props.intro[1]} <br/><br/>
   		<p><strong>MEN</strong></p>
 	    <table className="table table-bordered table-striped">
 	    	<thead>

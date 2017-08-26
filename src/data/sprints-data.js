@@ -1,3 +1,8 @@
+export const Sprints100 = [
+	"Runners race for 100m down the home straight of a 400m track. They start from blocks and run in lanes.",
+	"A reaction time – measured by sensors in the starting pistol and on the blocks – of less than 0.1 is deemed a false start and runners will be recalled, and the responsible athlete disqualified."
+];
+	
 export const Sprint100m = [
 	{
 		pos: "1",
@@ -46,6 +51,11 @@ export const Sprint100w = [
 	}
 ];
 
+export const Sprints200 = [
+	"Runners race for 100m around a bend and 100m down the home straight. They start from blocks and run in lanes.",
+	"A reaction time – measured by sensors in the starting pistol and on the blocks – of less than 0.1 is deemed a false start and runners will be recalled, and the responsible athlete disqualified. A runner can also be disqualified if he or she steps out of their designated lane."
+];
+
 export const Sprint200m = [
 	{
 		pos: "1",
@@ -92,6 +102,11 @@ export const Sprint200w = [
 		mark: "22.15",
 		reaction_time: "0.147"
 	}
+];
+
+export const Sprints400 = [
+	"Competitors run once around a 400m track. They start from blocks set in staggered positions and run in lanes.",
+	"A reaction time – measured by sensors in the starting pistol and on the blocks – of less than 0.1 is deemed a false start and runners will be recalled, and the responsible athlete disqualified. A runner can also be disqualified if he or she steps out of their designated lane."
 ];
 
 export const Sprint400m = [

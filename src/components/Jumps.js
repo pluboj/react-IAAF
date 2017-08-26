@@ -58,9 +58,9 @@ const Jumps = ({match}) => (
 	      	<Route path={`${match.path}/pvault`} 
 	      		render={ () => <JumpsContainer data={{m:PoleVaultM, w: PoleVaultW}} />} />
 	      	<Route path={`${match.path}/ljump`} 
-	      		render={ () => <JumpsContainer data={{m:TripleJumpM, w: TripleJumpW}} />} />
-	      	<Route path={`${match.path}/tjump`} 
 	      		render={ () => <JumpsContainer data={{m:LongJumpM, w: LongJumpW}} />} />
+	      	<Route path={`${match.path}/tjump`} 
+	      		render={ () => <JumpsContainer data={{m:TripleJumpM, w: TripleJumpW}} />} />
 		</div>
 	</div>
 )

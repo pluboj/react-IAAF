@@ -1,7 +1,7 @@
 import React from 'react';
 import JumpsE from './JumpsE';
 
-const JumpssContainer = (props) => {
+const JumpsContainer = (props) => {
   let resultsM = props.data.m.map((result) => {
     return <JumpsE pos={result.pos}
                    name={result.name}
@@ -68,4 +68,4 @@ const JumpssContainer = (props) => {
   );
 }
 
-export default JumpssContainer;
+export default JumpsContainer;
