@@ -1,6 +1,23 @@
 import React from 'react';
+import { Route, NavLink, Redirect } from 'react-router-dom';
 
-const Throws = () => (
+import ThrowsContainer from './throws/ThrowsContainer';
+import { 
+	ShotPut,
+	ShotPutM,
+	ShotPutW,
+	DiscusThrow,
+	DiscusThrowM,
+	DiscusThrowW,
+	HammerThrow,
+	HammerThrowM,
+	HammerThrowW,
+	JavelinThrow,
+	JavelinThrowM,
+	JavelinThrowW
+} from '../data/throws-data';
+
+const Throws = ({match}) => (
 	<div className="container">
 		<div className="jumbotron">
 			<div className="row">
@@ -8,20 +25,40 @@ const Throws = () => (
 					<h2>Throws</h2>
 				</div>
 				<ul className="nav nav-pills">
-		        <li role="presentation" className="active">
-		        	<a href='/throws/sput'>Shot Put</a>
-		        </li>
-		        <li role="presentation">
-		        	<a href='/throws/dthrow'>Discus Throw</a>
-		        </li>
-		        <li role="presentation">
-		        	<a href='/throws/hthrow'>Hammer Throw</a>
-		        </li>
-		        <li role="presentation">
-		        	<a href='/throws/jthrow'>Javelin Throw</a>
-		        </li>
+				<li><NavLink to={`${match.url}/sput`} 
+						className="btn btn-default">Shot Put</NavLink></li>
+				<li><NavLink to={`${match.url}/dthrow`} 
+						className="btn btn-default">Discus Throw</NavLink></li>
+				<li><NavLink to={`${match.url}/hthrow`} 
+						className="btn btn-default">Hammer Throw</NavLink></li>
+				<li><NavLink to={`${match.url}/jthrow`} 
+						className="btn btn-default">Javelin Throw</NavLink></li>
 		      	</ul>
 	      	</div>
+
+	      	<Route exact path={match.path} 
+	      		render={ () => <Redirect to={`${match.url}/sput`} /> } 
+	      	/>
+	      	<Route path={`${match.path}/sput`} 
+	      		render={ () => <ThrowsContainer 
+	      			data={{m:ShotPutM, w: ShotPutW}} 
+	      			intro={ShotPut}
+	      			/>} />
+	      	<Route path={`${match.path}/dthrow`} 
+	      		render={ () => <ThrowsContainer 
+	      			data={{m:DiscusThrowM, w: DiscusThrowW}} 
+	      			intro={DiscusThrow}
+	      			/>} />
+	      	<Route path={`${match.path}/hthrow`} 
+	      		render={ () => <ThrowsContainer 
+	      			data={{m:HammerThrowM, w: HammerThrowW}} 
+	      			intro={HammerThrow}
+	      			/>} />
+	      	<Route path={`${match.path}/jthrow`} 
+	      		render={ () => <ThrowsContainer 
+	      			data={{m:JavelinThrowM, w: JavelinThrowW}} 
+	      			intro={JavelinThrow}
+	      			/>} />
 		</div>
 	</div>
 )
