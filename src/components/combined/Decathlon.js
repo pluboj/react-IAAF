@@ -1,20 +1,23 @@
 import React from 'react';
-import CombinedE from './CombinedE';
+import DecathlonE from './DecathlonE';
 import Intro from '../Intro';
 
-const CombinedContainer = (props) => {
+const Decathlon = (props) => {
   let results = props.data.map((result) => {
-    return <CombinedE 
+    return <DecathlonE 
     			pos={result.pos}
                	name={result.name}
                	country={result.country}
-               	H100={result.H100}
-               	HJ={result.HJ}
+               	R100={result.R100}
+               	LJ={result.LJ}
                	SP={result.SP}
-               	R200={result.R200}
-				LJ={result.LJ}
+               	HJ={result.HJ}
+				R400={result.R400}
+				H110={result.H110}
+				DT={result.DT}
+				PV={result.PV}
 				JT={result.JT}
-				R800={result.R800}
+				R1500={result.R1500}
                	key={"comb-"+ result.pos} />
   }); 
 
@@ -33,16 +36,19 @@ let intro = props.intro.map((result, i) => {
 	    			<th rowSpan="2">POS</th>
 	    			<th rowSpan="2">NAME</th>
 		    		<th rowSpan="2">COUNTRY</th>
-	    			<th colSpan="7" style={{textAlign: "center"}}>MARK</th>
+	    			<th colSpan="10" style={{textAlign: "center"}}>MARK</th>
 	    		</tr>
 	    		<tr>
-		    		<th>100 Metres Hurdles</th>
-		    		<th>High Jump</th>
-		    		<th>Shot Put</th>
-		    		<th>200 Metres</th>
+		    		<th>100 Metres</th>
 		    		<th>Long Jump</th>
+		    		<th>Shot Put</th>
+		    		<th>High Jump</th>
+		    		<th>400 Metres</th>
+		    		<th>110 Metres Hurdles</th>
+		    		<th>Discus Throw</th>
+		    		<th>Pole Vault</th>
 		    		<th>Javelin Throw</th>
-		    		<th>800 Metres</th>
+		    		<th>1500 Metres</th>
 	    		</tr>
 	    	</thead>
 	    	<tbody>
@@ -53,4 +59,4 @@ let intro = props.intro.map((result, i) => {
   );
 }
 
-export default CombinedContainer;
+export default Decathlon;

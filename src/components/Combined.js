@@ -1,9 +1,12 @@
 import React from 'react';
 import { Route, NavLink, Redirect } from 'react-router-dom';
 
-import CombinedContainer from './combined/CombinedContainer';
-import { Heptathlon, 
-		 HeptathlonW 
+import Heptathlon from './combined/Heptathlon';
+import Decathlon from './combined/Decathlon';
+import { HeptathlonI, 
+		 HeptathlonW,
+		 DecathlonI, 
+		 DecathlonM 
 		} from '../data/combined-data';
 
 const Combined = ({match}) => (
@@ -35,8 +38,12 @@ const Combined = ({match}) => (
 	      		render={ () => <Redirect to={`${match.path}/heptathlon`} /> } 
 	      	/>
 	      	<Route path={`${match.path}/heptathlon`} 
-	      		render={ () => <CombinedContainer data={HeptathlonW} 
-	      		intro={Heptathlon}
+	      		render={ () => <Heptathlon data={HeptathlonW} 
+	      		intro={HeptathlonI}
+	      		/>} />
+	      	<Route path={`${match.path}/decathlon`} 
+	      		render={ () => <Decathlon data={DecathlonM} 
+	      		intro={DecathlonI}
 	      		/>} />
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CombinedE = (props) => (  
+const HeptathlonE = (props) => (  
     <tr>
       <td>{props.pos}</td>
       <td>{props.name}</td>
@@ -15,4 +15,4 @@ const CombinedE = (props) => (
     </tr>
 );
 
-export default CombinedE;
+export default HeptathlonE;
