@@ -1,5 +1,6 @@
 import React from 'react';
 import SprintE from './SprintE';
+import Intro from '../Intro';
 
 const SprintsContainer = (props) => {
   let resultsM = props.data.m.map((result) => {
@@ -20,10 +21,14 @@ const SprintsContainer = (props) => {
                    key={"m100-"+ result.pos} />
   }); 
 
+  let intro = props.intro.map((result) => {
+  	return <Intro text={result} />
+  });
+
   return (
   	<div>
   		<h4>How it works</h4>
-  		{props.intro[0]} <br/><br/> {props.intro[1]} <br/><br/>
+  		{intro}
   		<p><strong>MEN</strong></p>
 	    <table className="table table-bordered table-striped">
 	    	<thead>

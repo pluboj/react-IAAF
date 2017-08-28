@@ -21,3 +21,7 @@ div.navbar-brand {
 	color: #000 !important;
 	font-weight: bold;
 }
+
+.intro-text {
+	font-size: 1.1em !important;
+}
