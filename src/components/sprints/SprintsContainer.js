@@ -19,7 +19,7 @@ const SprintsContainer = (props) => {
                    reaction_time={result.reaction_time}
                    key={"m100-"+ result.pos} />
   }); 
-  
+
   return (
   	<div>
   		<h4>How it works</h4>
