@@ -19,8 +19,8 @@ const JumpsContainer = (props) => {
                    key={"hjumpw-"+ result.pos} />
   }); 
 
-let intro = props.intro.map((result) => {
-  	return <Intro text={result} />
+let intro = props.intro.map((result, i) => {
+  	return <Intro key={"txt-"+i} text={result} />
   });
 
   return (
