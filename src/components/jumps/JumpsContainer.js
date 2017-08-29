@@ -8,7 +8,7 @@ const JumpsContainer = (props) => {
                    name={result.name}
                    country={result.country}
                    mark={result.mark}
-                   key={"hjumpm-"+ result.pos} />
+                   key={"jumpm-"+ result.pos} />
   }); 
 
   let resultsW = props.data.w.map((result) => {
@@ -16,7 +16,7 @@ const JumpsContainer = (props) => {
                    name={result.name}
                    country={result.country}
                    mark={result.mark}
-                   key={"hjumpw-"+ result.pos} />
+                   key={"jumpw-"+ result.pos} />
   }); 
 
 let intro = props.intro.map((result, i) => {

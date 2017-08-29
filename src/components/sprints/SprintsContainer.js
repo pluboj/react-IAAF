@@ -9,7 +9,7 @@ const SprintsContainer = (props) => {
                    country={result.country}
                    mark={result.mark}
                    reaction_time={result.reaction_time}
-                   key={"m100-"+ result.pos} />
+                   key={"sprint-"+ result.pos} />
   }); 
 
   let resultsW = props.data.w.map((result) => {
@@ -18,7 +18,7 @@ const SprintsContainer = (props) => {
                    country={result.country}
                    mark={result.mark}
                    reaction_time={result.reaction_time}
-                   key={"m100-"+ result.pos} />
+                   key={"sprint-"+ result.pos} />
   }); 
 
   let intro = props.intro.map((result, i) => {
